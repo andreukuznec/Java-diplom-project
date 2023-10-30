@@ -73,13 +73,13 @@ public class Converter implements TextGraphicsConverter {
     @Override
     public void setMaxWidth(int width) {
         maxWidth = width;
-        System.out.println("Установлена максимальная ширина: " + width + "пикселей");
+        System.out.println("The maximum width is set: " + width + "pixels");
     }
 
     @Override
     public void setMaxHeight(int height) {
         maxHeight = height;
-        System.out.println("Установлена максимальная высота: " + height + "пикселей");
+        System.out.println("The maximum height is set: " + height + "pixels");
 
     }
 
