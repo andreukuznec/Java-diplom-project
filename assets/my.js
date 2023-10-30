@@ -2,7 +2,7 @@ async function submit() {
   setLoading(true);
   const url = document.getElementById("img-url").value;
   if (!url) {
-    error("Урл не может быть пустым!")
+    error("The url can't be empty!")
     return;
   }
   try {
@@ -11,7 +11,7 @@ async function submit() {
       body: url
     });
     if (!resp.ok) {
-      error("Не могу сконвертировать :'(")
+      error("Can't convert :'(")
       return;
     }
     const txtImgRaw = await resp.text();
@@ -20,9 +20,9 @@ async function submit() {
     console.log(txtImgCleaned.split("<br/>").length);
     console.log(txtImgCleaned)
     document.getElementById("txtimg").innerHTML = txtImgCleaned;
-    succ("Ваше изображение сконвертировано!");
+    succ("Your image has been converted!");
   } catch (e) {
-    error("Не могу сконвертировать :'(")
+    error("Can't convert :'(")
   }
 }
 
